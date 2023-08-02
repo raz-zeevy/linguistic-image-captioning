@@ -16,8 +16,10 @@
 ## Project Structure
 
 The project consists of the following key components:
+### Prepare Data
 
-### Prepare
+
+### Prepare Model 
 - *Annotations (`data/coco/annotations/train_captions.py`):*
 - *Image Data (`data/coco/train2014.py`):*
 - *Splits dataset .jsons files (`dataset_splits.dataset_splits_#.json`)*: the
@@ -32,7 +34,7 @@ The project consists of the following key components:
    ```
     for each splits the output is ..._train.pkl and ..._train_tokens.pkl
    
-### Train
+### Train Model - CLip
 
 1. **Main Train Sciprt (`train.py`):** 5 models overall are trained :
    - 4 models for each customized split
@@ -41,25 +43,25 @@ The project consists of the following key components:
 2. **Main Train Sciprt (`train.py`):** 
 
 
-### Evaluate
+### Evaluate - Compospsplit
 
 1. **Main Analysis Script (`main.py`):** This Python script performs the clustering analysis using the KMeans algorithm on the Big Five personality traits data.
 
-2. **Personality Traits Data (`data-final.csv`):** The dataset contains responses to personality assessment questions that quantify the Big Five traits for a group of individuals.
-
-3. **Notebook (`Neuro.ipynb`):** An optional Jupyter Notebook that contains additional analyses or experimentation.
-
-4. **Plots (`plots` directory):** This directory contains generated heatmaps and statistics plots for different cluster configurations.
 
 ## Project Results
 
 
-
 ## Conclusion
 
-
-
 Thank you for exploring our project, and we hope our work enriches your understanding of personality traits and clustering techniques.
-
 ---
 
+## Data Splits
+
+| Split   | Heldout Pairs                                | Train Size | Test Size |
+|---------|----------------------------------------------|------------|-----------|
+| Split 1 | black cat, big bird, red bus, small plane, eat man, lie woman | 79,836     | 1,354     |
+| Split 2 | brown dog, small cat, white truck, big plane, ride woman, fly bird | 79,858     | 1,342     |
+| Split 3 | white horse, big cat, blue bus, small table, hold child, stand bird | 79,940     | 1,455     |
+| Split 4 | black bird, small dog, white boat, big truck, eat horse, stand child | 79,627     | 1,503     |
+| Control |  | 79,815   |      |
