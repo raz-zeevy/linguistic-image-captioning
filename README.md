@@ -2,7 +2,7 @@
 
 ## TODO
 1. Change the parse_coco_composplit to receive the path's as parameters
-2. Add random sampling from the dataset for control model to be the same size as test 
+2. Remove the tokens from the envalutate file
    
 ## Overview
 
@@ -19,7 +19,8 @@ The project consists of the following key components:
 ### Prepare Data
 
 
-### Prepare Model 
+
+### Prepare Model - Clip
 - *Annotations (`data/coco/annotations/train_captions.py`):*
 - *Image Data (`data/coco/train2014.py`):*
 - *Splits dataset .jsons files (`dataset_splits.dataset_splits_#.json`)*: the
@@ -32,9 +33,9 @@ The project consists of the following key components:
    ```bash
    venv/bin/python parse_coco_composplit.py --clip_model_type ViT-B/32
    ```
-    for each splits the output is ..._train.pkl and ..._train_tokens.pkl
+    for each splits the output is ..._train.pkl and ..._train_tokens.pkl and for the control
    
-### Train Model - CLip
+### Train Model - Clip
 
 1. **Main Train Sciprt (`train.py`):** 5 models overall are trained :
    - 4 models for each customized split
@@ -43,7 +44,7 @@ The project consists of the following key components:
 2. **Main Train Sciprt (`train.py`):** 
 
 
-### Evaluate - Compospsplit
+### Evaluate - CompoSplit
 
 1. **Main Analysis Script (`main.py`):** This Python script performs the clustering analysis using the KMeans algorithm on the Big Five personality traits data.
 
