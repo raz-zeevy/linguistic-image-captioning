@@ -16,7 +16,7 @@
 ## Project Structure
 
 The project consists of the following key components:
-### Prepare Data
+### Prepare Data - Clip
 
 
 
